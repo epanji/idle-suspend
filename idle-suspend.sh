@@ -16,7 +16,6 @@ BINARY_NAME=idle-seconds
 BINARY=$PREFIX/bin/$BINARY_NAME
 
 AWK_ACTION='{
-if (NR!=1) {
   if ($4 ~ /days/) {
     split($4,d,"days");
     print d[1]*86400;
@@ -35,7 +34,7 @@ if (NR!=1) {
   } else {
     print $4;
   }
-}}'
+}'
 
 if [ -x $BINARY ]; then
     IDLE_SECONDS=$($BINARY)
