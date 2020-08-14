@@ -11,6 +11,13 @@
 
 SECONDS=300
 
+if [ -n $1 ]; then
+    REGEX='^[0-9]+$'
+    if [[ $1 =~ $REGEX ]]; then
+        SECONDS=$1
+    fi
+fi
+
 PREFIX=/usr
 BINARY_NAME=idle-seconds
 BINARY=$PREFIX/bin/$BINARY_NAME
