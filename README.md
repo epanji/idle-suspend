@@ -30,10 +30,10 @@ Use _crontab_ for permanent activation.
 ```sh
 crontab -e
 ```
-Add this line to crontab and save it.
+For user display _:0.0_, add this line and save it.
 
 ```sh
-* * * * * idle-suspend &>/dev/null
+* * * * * env - DISPLAY=:0.0 /usr/bin/idle-suspend &> /dev/null
 ```
 
 ## License
