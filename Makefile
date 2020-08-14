@@ -7,8 +7,7 @@
 #
 # Permanently add to crontab:
 # crontab -e
-# * * * * * idle-suspend &>/dev/null
-
+# * * * * * env - DISPLAY=:0.0 /usr/bin/idle-suspend &> /dev/null
 
 PREFIX=/usr
 BINARY_NAME=idle-seconds
