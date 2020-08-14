@@ -36,6 +36,12 @@ For user display _:0.0_, add this line and save it.
 * * * * * env - DISPLAY=:0.0 /usr/bin/idle-suspend &> /dev/null
 ```
 
+By default, countdown time before suspend is 300 seconds. But, we can optionally add seconds argument as we wish.
+
+```
+...idle-suspend 600 ...
+```
+
 ## License
 
 Public Domain
